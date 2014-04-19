@@ -41,7 +41,7 @@ package { 'git-core':
 # --- Ruby ---------------------------------------------------------------------
 
 exec { 'install_rvm':
-  command => "${as_vagrant} 'curl -L https://get.rvm.io | bash -s stable'",
+  command => "${as_vagrant} 'curl -L http://get.rvm.io | bash -s stable'",
   creates => "${home}/.rvm/bin/rvm",
   require => Package['curl']
 }
