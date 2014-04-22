@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
-gem 'rack'
 gem 'sinatra'
 
+gem 'rack'
+gem "mustache"
+gem "shotgun"

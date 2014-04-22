@@ -1,5 +1,17 @@
-require 'sinatra'
+require 'sinatra/base'
+require 'mustache/sinatra'
 
-get '/' do
-  "<h1>It fucking works!</h1>"
+class App < Sinatra::Base
+  register Mustache::Sinatra
+  require './views/layout.rb'
+
+  set :mustache, {
+    :views     => './views/',
+    :templates => './templates/'
+  }
+
+  get '/' do
+    mustache :index
+  end
+
 end
