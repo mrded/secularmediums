@@ -1,41 +1,32 @@
 require 'sinatra/base'
-require 'mustache/sinatra'
 
 class App < Sinatra::Base
-  register Mustache::Sinatra
-  require './views/layout.rb'
-
-  set :mustache, {
-    views: './views/',
-    templates: './templates/'
-  }
-
   get '/' do
-    mustache :index
+    erb :index
   end
 
   get '/your_session' do
-    mustache :your_session
+    erb :your_session
   end
 
   get '/retrospective' do
-    mustache :retrospective
+    erb :retrospective
   end
 
   get '/remote_questioning' do
-    mustache :remote_questioning
+    erb :remote_questioning
   end
 
   get '/book_excerpts' do
-    mustache :book_excerpts
+    erb :book_excerpts
   end
 
   get '/testimonials' do
-    mustache :testimonials
+    erb :testimonials
   end
 
   get '/contact' do
-    mustache :contact
+    erb :contact
   end
 
 end
