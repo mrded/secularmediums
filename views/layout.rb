@@ -2,7 +2,7 @@ class App
   module Views
     class Layout < Mustache
       def title
-        @title || "Seculiar Medium"
+        @title || "Secular Medium"
       end
 
       def year
