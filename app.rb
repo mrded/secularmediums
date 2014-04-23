@@ -1,6 +1,9 @@
 require 'sinatra/base'
+require 'sinatra/simple-navigation'
 
 class App < Sinatra::Base
+  register Sinatra::SimpleNavigation
+  
   get '/' do
     erb :index
   end
