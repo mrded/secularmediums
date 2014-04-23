@@ -10,7 +10,7 @@ Vagrant.configure('2') do |config|
     override.vm.box_url = 'http://files.vagrantup.com/precise64_vmware.box'
   end
 
-  config.vm.network :forwarded_port, guest: 3000, host: 3000
+  config.vm.network :forwarded_port, guest: 9292, host: 9292
 
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = 'puppet/manifests'
